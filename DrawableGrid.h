@@ -10,12 +10,14 @@
 
 class DrawableGrid: public sf::Drawable, public Grid
 {
-protected:
+public:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 	sf::VertexArray squares;
 	sf::VertexArray gridLines;
 
 public:
 	DrawableGrid(int width, int height, int tileSize);
+	void Set(int x, int y, int value);
+	void Clear();
 };
 
