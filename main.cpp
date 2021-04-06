@@ -1,10 +1,14 @@
 #include <SFML/Graphics.hpp>
+#include "DrawableGrid.h"
+
+#define tile_width 50
+#define tile_height 50
+#define tile_size 10
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 800), "Fluid simulation");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    sf::RenderWindow window(sf::VideoMode(tile_width*tile_size, tile_height* tile_size), "Fluid simulation");
+    DrawableGrid grid(tile_width, tile_height, tile_size);
 
     while(window.isOpen()) {
         sf::Event event;
@@ -14,7 +18,7 @@ int main()
         }
 
         window.clear();
-        window.draw(shape);
+        window.draw(grid);
         window.display();
     }
 
