@@ -146,12 +146,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DrawableGrid.cpp" />
+    <ClCompile Include="FluidGrid.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MouseInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DrawableGrid.h" />
+    <ClInclude Include="FluidGrid.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="MouseInput.h" />
   </ItemGroup>

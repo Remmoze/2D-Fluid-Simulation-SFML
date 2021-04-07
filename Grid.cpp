@@ -23,8 +23,8 @@ void Grid::Set(int x, int y, int value) {
 	this->values[y * width + x] = value;
 }
 
-void Grid::Clear() {
-	std::fill(this->values, this->values + width * height, 0);
+void Grid::Clear(int value) {
+	std::fill(this->values, this->values + width * height, value);
 }
 
 bool Grid::IsValidPosition(int x, int y) {

@@ -55,8 +55,8 @@ void DrawableGrid::Set(int x, int y, int value) {
 	}
 }
 
-void DrawableGrid::Clear() {
-	Grid::Clear();
+void DrawableGrid::Clear(int value) {
+	Grid::Clear(value);
 	for(int i = 0; i < this->width * this->height * 4; i++) {
 		squares[i].color = sf::Color(0, 0, 0);
 	}

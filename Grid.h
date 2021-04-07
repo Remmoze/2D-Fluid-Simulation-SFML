@@ -13,7 +13,7 @@ public:
 
 	int Get(int x, int y);
 	void Set(int x, int y, int value);
-	void Clear();
+	void Clear(int value = 0);
 
 	int width;
 	int height;
