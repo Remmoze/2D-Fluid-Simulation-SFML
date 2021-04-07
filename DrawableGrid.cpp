@@ -1,6 +1,6 @@
 #include "DrawableGrid.h"
 
-#define tileDefaultColor sf::Color(100, 10, 100)
+#define tileDefaultColor sf::Color(0, 0, 0, 255)
 #define lineDefaultColor sf::Color(255, 255, 255, 100)
 
 sf::Vertex CreateTile(int x, int y, int tileSize) {
@@ -46,6 +46,9 @@ void DrawableGrid::draw(sf::RenderTarget& target, sf::RenderStates states) const
 }
 
 void DrawableGrid::Set(int x, int y, int value) {
+	if(!this->IsValidPosition(x, y)) {
+		return;
+	}
 	Grid::Set(x, y, value);
 	for(int i = 0; i < 4; i++) {
 		squares[(y * this->width + x) * 4 + i].color = sf::Color(value, value, value);

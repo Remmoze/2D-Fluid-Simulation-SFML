@@ -5,6 +5,8 @@ class Grid
 protected:
 	int* values;
 
+	bool IsValidPosition(int x, int y);
+
 public:
 
 	Grid(int width, int height, int tileSize);
