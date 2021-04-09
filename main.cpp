@@ -4,13 +4,13 @@
 
 #include <iostream>
 
-#define tile_width 80
-#define tile_height 80
+#define tile_width 50
+#define tile_height 50
 #define tile_size 10
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(tile_width*tile_size, tile_height* tile_size), "Fluid simulation");
+    sf::RenderWindow window(sf::VideoMode((tile_width + 2) *tile_size, (tile_height+2)* tile_size), "Fluid simulation");
     window.setFramerateLimit(60);
 
     sf::Clock Clock;
